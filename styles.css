@@ -1,0 +1,11 @@
+.header {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 10px;
+}
+.hyperlinks {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 10px;
+}
