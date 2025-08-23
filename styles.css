@@ -103,3 +103,81 @@ a {
     max-width: 80%; /* Prevents the text from stretching too wide */
     margin: 0 auto; /* Centers the text block */
 }
+
+.background {
+    background-image: url('Daniil-emo.jpg');
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    height: 400px; /* Fixed height */
+    width: 400px; /* Fixed width */
+}
+
+.empty-content {
+    color: #FFFFFF;
+    font-style: italic;
+    animation: rotate 5s linear infinite;
+    text-align: center;
+    
+    /* Add these properties to center it */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg); /* Initial state */
+    z-index: 10; /* Add this to ensure it's on top */
+    font-size: 24px; /* Optional: make the text larger */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: add shadow for better visibility */
+}
+
+@keyframes rotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.dvd-bounce {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    background-image: url('Daniil-emo.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: bounce 15s linear infinite alternate;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 5; /* Add this to ensure it's below the text */
+}
+
+@keyframes bounce {
+    0% {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+    25% {
+        top: 0;
+        left: calc(100% - 200px); /* 100% - width of element */
+        transform: translate(0, 0);
+    }
+    50% {
+        top: calc(100% - 150px); /* 100% - height of element */
+        left: calc(100% - 200px);
+        transform: translate(0, 0);
+    }
+    75% {
+        top: calc(100% - 150px);
+        left: 0;
+        transform: translate(0, 0);
+    }
+    100% {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+}
+
+/* A container to properly position the bouncing element */
+.bounce-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px); /* Adjust based on your header height */
+    overflow: hidden;
+    background-color: #000; /* Optional: dark background like classic DVD screensaver */
+}
