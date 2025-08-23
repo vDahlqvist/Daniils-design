@@ -87,3 +87,19 @@ a {
     
     
 }
+
+.quote {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f0f0f0; /* Light gray background, adjust as needed */
+    margin-top: 10px; /* Space between header and quote */
+    font-style: italic; /* Makes the quote text italic */
+}
+
+.quote p {
+    margin: 0;
+    font-size: 150px; /* Larger font size */
+    max-width: 80%; /* Prevents the text from stretching too wide */
+    margin: 0 auto; /* Centers the text block */
+}
