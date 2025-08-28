@@ -5,17 +5,17 @@ html, body {
 }
 
 .header {
+    display: flex;
     background-color: #000000;
     color: #FFFFFF;
     padding: 10px;
     border-bottom: 2px solid #FFFFFF;
-    display: flex; /* Make the header a flex container */
-    justify-content: space-between; /* Space between the title and links */
+    justify-content: space-between; 
     align-items: center;
 }
 
-.header h1 {
-    font-size: 16px;
+.header h1 {    
+    font-size: 3vw;
 }
 .hyperlinks {
     display: flex;
@@ -31,13 +31,14 @@ html, body {
 
 }
 .left-div, .right-div {
-    width: 50%; /* Each div takes exactly half the space */
-    box-sizing: border-box; /* Ensures padding doesn't add to the width */
     display: flex;
+    height: 100%;
+    width: 50%; 
+    box-sizing: border-box; 
     flex-direction: column;
-    justify-content: center; /* Vertically centers content */
-    align-items: center; /* Horizontally centers content */
-    text-align: center; /* Centers text content */
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
     padding-top: 80px;
     
    
@@ -51,26 +52,29 @@ html, body {
 }
 
 .left-div img {
-    width: 400px; /* Match the image's actual size */
-    height: 400px;
+    max-width: 100%; 
+    max-height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    display: block;
-    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+    
 
     
     
 }
 
 .left-div {
-    padding-top: 20px;
+   
     height: 100%;
     background-color: #000000;
 }
 
 p {
     font-family: 'Calibri', sans-serif;
-    font-size: 14px;
+    font-size: 1vw;
 }
 
 h1 {
@@ -78,11 +82,11 @@ h1 {
 }
 
 a {
-    color: #FFFFFF; /* Standard link color */
-    text-decoration: none; /* Remove underline */
+    color: #FFFFFF; 
+    text-decoration: none; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 11px;
-    margin-left: 20px; /* Space between links */
+    font-size: 1vw;
+    margin-left: 20px; 
     font-weight: lighter;
     
     
@@ -92,14 +96,38 @@ a {
     width: 100%;
     text-align: center;
     padding: 20px 0;
-    background-color: #f0f0f0; /* Light gray background, adjust as needed */
-    margin-top: 10px; /* Space between header and quote */
-    font-style: italic; /* Makes the quote text italic */
+    background-color: #f0f0f0; 
+    margin-top: 10px; 
+    font-style: italic; 
 }
 
 .quote p {
     margin: 0;
-    font-size: 150px; /* Larger font size */
-    max-width: 80%; /* Prevents the text from stretching too wide */
-    margin: 0 auto; /* Centers the text block */
+    font-size: 150px; 
+    max-width: 80%; 
+    margin: 0 auto; 
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .left-div, .right-div {
+        width: 100%; 
+        height: auto;
+        
+    }
+    p {
+        font-size: 3vw; 
+    }
+    a {
+        font-size: 3vw; 
+    }
+
+    .quote p {
+        font-size: 100px; 
+        max-width: 80%; 
+        margin: 0 auto; 
+    }
 }
